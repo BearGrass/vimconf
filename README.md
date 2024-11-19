@@ -11,3 +11,8 @@ cd ctags-6.1.0/
 make
 sudo make install
 ```
+
+## ctags example
+```
+ctags -R --kinds-C=+defgmpstuvx --fields=+iaS --extras=+q dir1 dir2 dir3
+```
