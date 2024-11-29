@@ -1,7 +1,11 @@
 # vimconf
 ## work
 ```
-tar -xf Gzz_settings-2017-07-26.tar -C ~/
+mkdir ~/vimbackup
+mv ~/.vim ~/.viminfo ~/.vimrc ~/vimbackup
+cp -r .vim  .viminfo  .vimrc ~/
+
+# install ctags
 sudo apt-get install ctags
 # or
 unzip ctags-6.1.0.zip
