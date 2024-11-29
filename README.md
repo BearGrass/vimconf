@@ -19,6 +19,19 @@ make
 sudo make install
 ```
 
+## install node
+```
+# https://blog.csdn.net/xiangxianghehe/article/details/136529419
+sudo apt-get install -y nodejs
+sudo apt install npm
+
+npm --registry https://registry.npmmirror.com install
+cd ~/.vim/bundle/coc.nvim
+npm ci
+npm config set registry https://registry.npmmirror.com
+vim
+```
+
 ## ctags example
 ```
 ctags -R --kinds-C=+defgmpstuvx --fields=+iaS --extras=+q dir1 dir2 dir3
