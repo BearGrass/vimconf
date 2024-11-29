@@ -11,7 +11,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~Msle0~/\<LightLineFilename\>
+~MSle0~/install.mk
 
 # Last Substitute Search Pattern:
 ~MSle0&rr_ready_list
@@ -21,35 +21,17 @@ $
 
 # Command Line History (newest to oldest):
 :wq
-|2,0,1732860227,,"wq"
-:w
-|2,0,1732860177,,"w"
-:qall
-|2,0,1732860223,,"qall"
-:PluginInstall
-|2,0,1732860187,,"PluginInstall"
+|2,0,1732854952,,"wq"
 :q
-|2,0,1732860182,,"q"
-:set nonu
-|2,0,1732859697,,"set nonu"
-:set nu
-|2,0,1732858371,,"set nu"
-:q!
-|2,0,1732858312,,"q!"
-:qall!
-|2,0,1732858131,,"qall!"
-:PluginList
-|2,0,1732858080,,"PluginList"
-:Plugin
-|2,0,1732858073,,"Plugin"
-:bn
-|2,0,1732857685,,"bn"
-:b
-|2,0,1732857326,,"b"
-:b 
-|2,0,1732857272,,"b "
+|2,0,1732854731,,"q"
+:qall
+|2,0,1732854029,,"qall"
 :92
 |2,0,0,,"92"
+:q!
+|2,0,0,,"q!"
+:w
+|2,0,0,,"w"
 :vsplit
 |2,0,0,,"vsplit"
 :set paste
@@ -82,24 +64,6 @@ $
 |2,0,0,,"937"
 
 # Search String History (newest to oldest):
-? \<LightLineFilename\>
-|2,1,1732860064,,"\\<LightLineFilename\\>"
-?/asdf
-|2,1,1732860061,47,"asdf"
-?/LightLineFilename
-|2,1,1732860001,47,"LightLineFilename"
-?/statusline
-|2,1,1732858880,47,"statusline"
-?/ /
-|2,1,1732858246,47," /"
-??tab
-|2,1,1732858228,63,"tab"
-?/1
-|2,1,1732857773,47,"1"
-?/end
-|2,1,1732857545,47,"end"
-?/buffer
-|2,1,1732857507,47,"buffer"
 ?/install.mk
 |2,1,0,47,"install.mk"
 ?/script
@@ -151,57 +115,35 @@ $
 
 # Registers:
 "0	LINE	0
-	Bundle 'ctrlp.vim'
-|3,0,0,1,1,0,1732858188,"Bundle 'ctrlp.vim'"
-""1	LINE	0
-	      \   'fugitive': 'LightLineFugitive',
-	      \   'readonly': 'LightLineReadonly',
-	      \   'modified': 'LightLineModified',
-|3,1,1,1,3,0,1732860106,"      \\   'fugitive': 'LightLineFugitive',","      \\   'readonly': 'LightLineReadonly',","      \\   'modified': 'LightLineModified',"
+	echo $CFLAGS
+|3,0,0,1,1,0,0,"echo $CFLAGS"
+"1	LINE	0
+	
+|3,0,1,1,1,0,0,""
 "2	LINE	0
-	      \             [ 'fugitive', 'filename' ] ]  " 显示 git 状态和文件名
-|3,0,2,1,1,0,1732859951,"      \\             [ 'fugitive', 'filename' ] ]  \" 显示 git 状态和文件名"
+	
+|3,0,2,1,1,0,0,""
 "3	LINE	0
 	
-|3,0,3,1,1,0,1732859946,""
+|3,0,3,1,1,0,0,""
 "4	LINE	0
-	
-|3,0,4,1,1,0,1732859945,""
+	};
+|3,0,4,1,1,0,0,"};"
 "5	LINE	0
-	
-|3,0,5,1,1,0,1732859943,""
+	  }
+|3,0,5,1,1,0,0,"  }"
 "6	LINE	0
-	
-|3,0,6,1,1,0,1732859942,""
+	    return strcmp(s1, s2) < 0;
+|3,0,6,1,1,0,0,"    return strcmp(s1, s2) < 0;"
 "7	LINE	0
-	let g:lightline = {
-	      \ 'colorscheme': 'landscape',
-	      \ 'active': {
-	      \   'left': [ [ 'mode', 'paste' ],
-	      \             [ 'fugitive', 'filename' ] ]
-	      \ },
-	      \ 'component_function': {
-	      \   'fugitive': 'LightLineFugitive',
-	      \   'readonly': 'LightLineReadonly',
-	      \   'modified': 'LightLineModified',
-	      \   'filename': 'LightLineFilename'
-	      \ },
-	      \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
-	      \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" }
-	      \ }
-	
-	
-|3,0,7,1,17,0,1732859908,"let g:lightline = {","      \\ 'colorscheme': 'landscape',","      \\ 'active': {","      \\   'left': [ [ 'mode', 'paste' ],","      \\             [ 'fugitive', 'filename' ] ]","      \\ },","      \\ 'component_function': {","      \\   'fugitive': 'LightLineFugitive',","      \\   'readonly': 'LightLineReadonly',","      \\   'modified': 'LightLineModified',","      \\   'filename': 'LightLineFilename'","      \\ },",>70
-|<"      \\ 'separator': { 'left': \"\\ue0b0\", 'right': \"\\ue0b2\" },","      \\ 'subseparator': { 'left': \"\\ue0b1\", 'right': \"\\ue0b3\" }","      \\ }","",""
+	  bool operator()(const char* s1, const char* s2) const {
+|3,0,7,1,1,0,0,"  bool operator()(const char* s1, const char* s2) const {"
 "8	LINE	0
-	Bundl
-|3,0,8,1,1,0,1732859586,"Bundl"
+	struct ltstr {
+|3,0,8,1,1,0,0,"struct ltstr {"
 "9	LINE	0
-	"tagBar
-	let g:tagbar_ctags_bin = 'ctags'
-	let g:tagbar_width = 30
-	nmap <silent> <F4> :TagbarToggle<CR>
-|3,0,9,1,4,0,1732859578,"\"tagBar","let g:tagbar_ctags_bin = 'ctags'","let g:tagbar_width = 30","nmap <silent> <F4> :TagbarToggle<CR>"
+	
+|3,0,9,1,1,0,0,""
 "j	CHAR	0
 	611
 <jjjjjjjjjj:q:q!ojjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkjjjjkllllllllllllkukrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkrkli,$this->request->isPost()==:wkdkrkrkrkrkrkrkrkrkrkrkrkrkrkdddkukup==okukdkdkrkrkrkrkrxxxxxxxxxxxxxxxxxxgrakDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkDkukukudd:w:41Gggjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjkkkkkkllllllllllllllllllllllllllhhi_
@@ -217,342 +159,239 @@ $
 "q	CHAR	0
 	"q":
 |3,0,26,0,1,0,0,"\"q\":"
-"-	CHAR	0
-	,
-|3,0,36,0,1,0,1732859955,","
+""-	CHAR	0
+	v
+|3,1,36,0,1,0,1732854070,"v"
 
 # File marks:
-'0  140  0  ~/.vimrc
-|4,48,140,0,1732860227,"~/.vimrc"
-'1  143  0  ~/git/vimconf/.vimrc
-|4,49,143,0,1732860223,"~/git/vimconf/.vimrc"
-'2  24  0  ~/git/vimconf/README.md
-|4,50,24,0,1732860196,"~/git/vimconf/README.md"
-'3  8  0  ~/git/vimconf/[Vundle] Installer
-|4,51,8,0,1732860191,"~/git/vimconf/[Vundle] Installer"
-'4  1  0  ~/git/vimconf/README.md
-|4,52,1,0,1732860182,"~/git/vimconf/README.md"
-'5  1  0  ~/git/vimconf/README.md
-|4,53,1,0,1732860182,"~/git/vimconf/README.md"
-'6  1  0  ~/git/vimconf/README.md
-|4,54,1,0,1732860182,"~/git/vimconf/README.md"
-'7  1  0  ~/git/vimconf/README.md
-|4,55,1,0,1732860182,"~/git/vimconf/README.md"
-'8  148  6  ~/.vimrc
-|4,56,148,6,1732860109,"~/.vimrc"
-'9  146  6  ~/.vimrc
-|4,57,146,6,1732860109,"~/.vimrc"
+'0  94  0  ~/git/vimconf/.vimrc
+|4,48,94,0,1732854952,"~/git/vimconf/.vimrc"
+'1  2  0  ~/git/vimconf/.vimrc
+|4,49,2,0,1732854731,"~/git/vimconf/.vimrc"
+'2  1  0  ~/git/vimconf/.vimrc
+|4,50,1,0,1732854731,"~/git/vimconf/.vimrc"
+'3  1  0  ~/git/vimconf/.git/config
+|4,51,1,0,1732854311,"~/git/vimconf/.git/config"
+'4  6  4  ~/git/vimconf/README.md
+|4,52,6,4,1732854073,"~/git/vimconf/README.md"
+'5  7  0  ~/git/vimconf/NERD_tree_1
+|4,53,7,0,1732854029,"~/git/vimconf/NERD_tree_1"
+'6  74  2  ~/dpdk/NERD_tree_1
+|4,54,74,2,0,"~/dpdk/NERD_tree_1"
+'7  42  0  ~/dpdk/mk/target/generic/rte.vars.mk
+|4,55,42,0,0,"~/dpdk/mk/target/generic/rte.vars.mk"
+'8  1  0  ~/dpdk/mk/internal/rte.depdirs-post.mk
+|4,56,1,0,0,"~/dpdk/mk/internal/rte.depdirs-post.mk"
+'9  94  11  ~/dpdk/mk/rte.subdir.mk
+|4,57,94,11,0,"~/dpdk/mk/rte.subdir.mk"
 
 # Jumplist (newest first):
--'  140  0  ~/.vimrc
-|4,39,140,0,1732860227,"~/.vimrc"
--'  143  0  ~/git/vimconf/.vimrc
-|4,39,143,0,1732860223,"~/git/vimconf/.vimrc"
+-'  94  0  ~/git/vimconf/.vimrc
+|4,39,94,0,1732854952,"~/git/vimconf/.vimrc"
+-'  6  0  ~/git/vimconf/.vimrc
+|4,39,6,0,1732854749,"~/git/vimconf/.vimrc"
+-'  2  0  ~/git/vimconf/.vimrc
+|4,39,2,0,1732854742,"~/git/vimconf/.vimrc"
 -'  1  0  ~/git/vimconf/.vimrc
-|4,39,1,0,1732860218,"~/git/vimconf/.vimrc"
--'  24  0  ~/git/vimconf/README.md
-|4,39,24,0,1732860196,"~/git/vimconf/README.md"
--'  24  0  ~/git/vimconf/README.md
-|4,39,24,0,1732860196,"~/git/vimconf/README.md"
+|4,39,1,0,1732854731,"~/git/vimconf/.vimrc"
+-'  1  0  ~/git/vimconf/.git/config
+|4,39,1,0,1732854311,"~/git/vimconf/.git/config"
+-'  1  0  ~/git/vimconf/.git/config
+|4,39,1,0,1732854311,"~/git/vimconf/.git/config"
+-'  1  0  ~/git/vimconf/.git/config
+|4,39,1,0,1732854311,"~/git/vimconf/.git/config"
+-'  1  0  ~/git/vimconf/.git/config
+|4,39,1,0,1732854311,"~/git/vimconf/.git/config"
+-'  6  4  ~/git/vimconf/README.md
+|4,39,6,4,1732854073,"~/git/vimconf/README.md"
+-'  6  4  ~/git/vimconf/README.md
+|4,39,6,4,1732854073,"~/git/vimconf/README.md"
+-'  6  4  ~/git/vimconf/README.md
+|4,39,6,4,1732854073,"~/git/vimconf/README.md"
+-'  6  4  ~/git/vimconf/README.md
+|4,39,6,4,1732854073,"~/git/vimconf/README.md"
+-'  6  4  ~/git/vimconf/README.md
+|4,39,6,4,1732854073,"~/git/vimconf/README.md"
+-'  6  4  ~/git/vimconf/README.md
+|4,39,6,4,1732854073,"~/git/vimconf/README.md"
+-'  6  4  ~/git/vimconf/README.md
+|4,39,6,4,1732854073,"~/git/vimconf/README.md"
+-'  6  4  ~/git/vimconf/README.md
+|4,39,6,4,1732854073,"~/git/vimconf/README.md"
 -'  1  0  ~/git/vimconf/README.md
-|4,39,1,0,1732860192,"~/git/vimconf/README.md"
+|4,39,1,0,1732854067,"~/git/vimconf/README.md"
 -'  1  0  ~/git/vimconf/README.md
-|4,39,1,0,1732860192,"~/git/vimconf/README.md"
--'  8  0  ~/git/vimconf/[Vundle] Installer
-|4,39,8,0,1732860191,"~/git/vimconf/[Vundle] Installer"
--'  8  0  ~/git/vimconf/[Vundle] Installer
-|4,39,8,0,1732860191,"~/git/vimconf/[Vundle] Installer"
--'  8  0  ~/git/vimconf/[Vundle] Installer
-|4,39,8,0,1732860191,"~/git/vimconf/[Vundle] Installer"
--'  8  0  ~/git/vimconf/[Vundle] Installer
-|4,39,8,0,1732860191,"~/git/vimconf/[Vundle] Installer"
+|4,39,1,0,1732854067,"~/git/vimconf/README.md"
 -'  1  0  ~/git/vimconf/README.md
-|4,39,1,0,1732860187,"~/git/vimconf/README.md"
+|4,39,1,0,1732854067,"~/git/vimconf/README.md"
 -'  1  0  ~/git/vimconf/README.md
-|4,39,1,0,1732860187,"~/git/vimconf/README.md"
+|4,39,1,0,1732854067,"~/git/vimconf/README.md"
 -'  1  0  ~/git/vimconf/README.md
-|4,39,1,0,1732860182,"~/git/vimconf/README.md"
+|4,39,1,0,1732854067,"~/git/vimconf/README.md"
 -'  1  0  ~/git/vimconf/README.md
-|4,39,1,0,1732860182,"~/git/vimconf/README.md"
--'  1  0  ~/.vimrc
-|4,39,1,0,1732860110,"~/.vimrc"
--'  148  6  ~/.vimrc
-|4,39,148,6,1732860109,"~/.vimrc"
--'  146  6  ~/.vimrc
-|4,39,146,6,1732860109,"~/.vimrc"
--'  146  6  ~/.vimrc
-|4,39,146,6,1732860109,"~/.vimrc"
--'  146  6  ~/.vimrc
-|4,39,146,6,1732860109,"~/.vimrc"
--'  146  6  ~/.vimrc
-|4,39,146,6,1732860109,"~/.vimrc"
--'  146  6  ~/.vimrc
-|4,39,146,6,1732860109,"~/.vimrc"
--'  146  6  ~/.vimrc
-|4,39,146,6,1732860109,"~/.vimrc"
--'  146  6  ~/.vimrc
-|4,39,146,6,1732860109,"~/.vimrc"
--'  146  6  ~/.vimrc
-|4,39,146,6,1732860109,"~/.vimrc"
--'  122  10  ~/.vimrc
-|4,39,122,10,1732860066,"~/.vimrc"
--'  121  0  ~/.vimrc
-|4,39,121,0,1732860066,"~/.vimrc"
--'  122  10  ~/.vimrc
-|4,39,122,10,1732860066,"~/.vimrc"
--'  121  0  ~/.vimrc
-|4,39,121,0,1732860066,"~/.vimrc"
--'  122  10  ~/.vimrc
-|4,39,122,10,1732860066,"~/.vimrc"
--'  121  0  ~/.vimrc
-|4,39,121,0,1732860066,"~/.vimrc"
--'  122  10  ~/.vimrc
-|4,39,122,10,1732860066,"~/.vimrc"
--'  121  0  ~/.vimrc
-|4,39,121,0,1732860066,"~/.vimrc"
--'  122  10  ~/.vimrc
-|4,39,122,10,1732860066,"~/.vimrc"
--'  121  0  ~/.vimrc
-|4,39,121,0,1732860066,"~/.vimrc"
--'  122  10  ~/.vimrc
-|4,39,122,10,1732860066,"~/.vimrc"
--'  121  0  ~/.vimrc
-|4,39,121,0,1732860066,"~/.vimrc"
--'  122  10  ~/.vimrc
-|4,39,122,10,1732860066,"~/.vimrc"
--'  121  0  ~/.vimrc
-|4,39,121,0,1732860066,"~/.vimrc"
--'  122  10  ~/.vimrc
-|4,39,122,10,1732860066,"~/.vimrc"
--'  121  0  ~/.vimrc
-|4,39,121,0,1732860066,"~/.vimrc"
--'  122  10  ~/.vimrc
-|4,39,122,10,1732860066,"~/.vimrc"
--'  121  0  ~/.vimrc
-|4,39,121,0,1732860066,"~/.vimrc"
--'  29  0  ~/git/vimconf/README.md
-|4,39,29,0,1732860027,"~/git/vimconf/README.md"
--'  29  0  ~/git/vimconf/README.md
-|4,39,29,0,1732860027,"~/git/vimconf/README.md"
--'  29  0  ~/git/vimconf/README.md
-|4,39,29,0,1732860027,"~/git/vimconf/README.md"
--'  29  0  ~/git/vimconf/README.md
-|4,39,29,0,1732860027,"~/git/vimconf/README.md"
--'  29  0  ~/git/vimconf/README.md
-|4,39,29,0,1732860027,"~/git/vimconf/README.md"
--'  29  0  ~/git/vimconf/README.md
-|4,39,29,0,1732860027,"~/git/vimconf/README.md"
--'  29  0  ~/git/vimconf/README.md
-|4,39,29,0,1732860027,"~/git/vimconf/README.md"
--'  29  0  ~/git/vimconf/README.md
-|4,39,29,0,1732860027,"~/git/vimconf/README.md"
--'  29  0  ~/git/vimconf/README.md
-|4,39,29,0,1732860027,"~/git/vimconf/README.md"
+|4,39,1,0,1732854067,"~/git/vimconf/README.md"
 -'  1  0  ~/git/vimconf/README.md
-|4,39,1,0,1732860009,"~/git/vimconf/README.md"
+|4,39,1,0,1732854067,"~/git/vimconf/README.md"
 -'  1  0  ~/git/vimconf/README.md
-|4,39,1,0,1732860009,"~/git/vimconf/README.md"
--'  1  0  ~/git/vimconf/README.md
-|4,39,1,0,1732860009,"~/git/vimconf/README.md"
--'  86  0  ~/git/vimconf/.vimrc
-|4,39,86,0,1732860008,"~/git/vimconf/.vimrc"
--'  86  0  ~/git/vimconf/.vimrc
-|4,39,86,0,1732860008,"~/git/vimconf/.vimrc"
--'  86  0  ~/git/vimconf/.vimrc
-|4,39,86,0,1732860008,"~/git/vimconf/.vimrc"
--'  86  0  ~/git/vimconf/.vimrc
-|4,39,86,0,1732860008,"~/git/vimconf/.vimrc"
--'  86  0  ~/git/vimconf/.vimrc
-|4,39,86,0,1732860008,"~/git/vimconf/.vimrc"
--'  86  0  ~/git/vimconf/.vimrc
-|4,39,86,0,1732860008,"~/git/vimconf/.vimrc"
--'  86  0  ~/git/vimconf/.vimrc
-|4,39,86,0,1732860008,"~/git/vimconf/.vimrc"
--'  86  0  ~/git/vimconf/.vimrc
-|4,39,86,0,1732860008,"~/git/vimconf/.vimrc"
--'  86  0  ~/git/vimconf/.vimrc
-|4,39,86,0,1732860008,"~/git/vimconf/.vimrc"
--'  86  0  ~/git/vimconf/.vimrc
-|4,39,86,0,1732860008,"~/git/vimconf/.vimrc"
--'  86  0  ~/git/vimconf/.vimrc
-|4,39,86,0,1732860008,"~/git/vimconf/.vimrc"
--'  86  0  ~/git/vimconf/.vimrc
-|4,39,86,0,1732860008,"~/git/vimconf/.vimrc"
--'  86  0  ~/git/vimconf/.vimrc
-|4,39,86,0,1732860008,"~/git/vimconf/.vimrc"
--'  86  0  ~/git/vimconf/.vimrc
-|4,39,86,0,1732860008,"~/git/vimconf/.vimrc"
--'  86  0  ~/git/vimconf/.vimrc
-|4,39,86,0,1732860008,"~/git/vimconf/.vimrc"
--'  86  0  ~/git/vimconf/.vimrc
-|4,39,86,0,1732860008,"~/git/vimconf/.vimrc"
--'  86  0  ~/git/vimconf/.vimrc
-|4,39,86,0,1732860008,"~/git/vimconf/.vimrc"
--'  86  0  ~/git/vimconf/.vimrc
-|4,39,86,0,1732860008,"~/git/vimconf/.vimrc"
--'  86  0  ~/git/vimconf/.vimrc
-|4,39,86,0,1732860008,"~/git/vimconf/.vimrc"
--'  145  23  ~/.vimrc
-|4,39,145,23,1732860001,"~/.vimrc"
--'  143  23  ~/.vimrc
-|4,39,143,23,1732860001,"~/.vimrc"
--'  143  23  ~/.vimrc
-|4,39,143,23,1732860001,"~/.vimrc"
--'  143  23  ~/.vimrc
-|4,39,143,23,1732860001,"~/.vimrc"
--'  143  23  ~/.vimrc
-|4,39,143,23,1732860001,"~/.vimrc"
--'  143  23  ~/.vimrc
-|4,39,143,23,1732860001,"~/.vimrc"
--'  143  23  ~/.vimrc
-|4,39,143,23,1732860001,"~/.vimrc"
--'  143  23  ~/.vimrc
-|4,39,143,23,1732860001,"~/.vimrc"
--'  143  23  ~/.vimrc
-|4,39,143,23,1732860001,"~/.vimrc"
--'  155  0  ~/.vimrc
-|4,39,155,0,1732859965,"~/.vimrc"
--'  152  0  ~/.vimrc
-|4,39,152,0,1732859965,"~/.vimrc"
--'  152  0  ~/.vimrc
-|4,39,152,0,1732859965,"~/.vimrc"
--'  152  0  ~/.vimrc
-|4,39,152,0,1732859965,"~/.vimrc"
--'  152  0  ~/.vimrc
-|4,39,152,0,1732859965,"~/.vimrc"
--'  152  0  ~/.vimrc
-|4,39,152,0,1732859965,"~/.vimrc"
--'  152  0  ~/.vimrc
-|4,39,152,0,1732859965,"~/.vimrc"
--'  152  0  ~/.vimrc
-|4,39,152,0,1732859965,"~/.vimrc"
--'  152  0  ~/.vimrc
-|4,39,152,0,1732859965,"~/.vimrc"
--'  59  25  ~/.vimrc
-|4,39,59,25,1732859844,"~/.vimrc"
--'  59  25  ~/.vimrc
-|4,39,59,25,1732859844,"~/.vimrc"
--'  59  25  ~/.vimrc
-|4,39,59,25,1732859844,"~/.vimrc"
--'  59  25  ~/.vimrc
-|4,39,59,25,1732859844,"~/.vimrc"
--'  59  25  ~/.vimrc
-|4,39,59,25,1732859844,"~/.vimrc"
--'  59  25  ~/.vimrc
-|4,39,59,25,1732859844,"~/.vimrc"
--'  59  25  ~/.vimrc
-|4,39,59,25,1732859844,"~/.vimrc"
--'  59  25  ~/.vimrc
-|4,39,59,25,1732859844,"~/.vimrc"
+|4,39,1,0,1732854067,"~/git/vimconf/README.md"
+-'  7  0  ~/git/vimconf/NERD_tree_1
+|4,39,7,0,1732854029,"~/git/vimconf/NERD_tree_1"
+-'  7  0  ~/git/vimconf/NERD_tree_1
+|4,39,7,0,1732854029,"~/git/vimconf/NERD_tree_1"
+-'  7  0  ~/git/vimconf/NERD_tree_1
+|4,39,7,0,1732854029,"~/git/vimconf/NERD_tree_1"
+-'  7  0  ~/git/vimconf/NERD_tree_1
+|4,39,7,0,1732854029,"~/git/vimconf/NERD_tree_1"
+-'  7  0  ~/git/vimconf/NERD_tree_1
+|4,39,7,0,1732854029,"~/git/vimconf/NERD_tree_1"
+-'  7  0  ~/git/vimconf/NERD_tree_1
+|4,39,7,0,1732854029,"~/git/vimconf/NERD_tree_1"
+-'  7  0  ~/git/vimconf/NERD_tree_1
+|4,39,7,0,1732854029,"~/git/vimconf/NERD_tree_1"
+-'  7  0  ~/git/vimconf/NERD_tree_1
+|4,39,7,0,1732854029,"~/git/vimconf/NERD_tree_1"
+-'  7  0  ~/git/vimconf/NERD_tree_1
+|4,39,7,0,1732854029,"~/git/vimconf/NERD_tree_1"
+-'  7  0  ~/git/vimconf/NERD_tree_1
+|4,39,7,0,1732854029,"~/git/vimconf/NERD_tree_1"
+-'  7  0  ~/git/vimconf/NERD_tree_1
+|4,39,7,0,1732854029,"~/git/vimconf/NERD_tree_1"
+-'  7  0  ~/git/vimconf/NERD_tree_1
+|4,39,7,0,1732854029,"~/git/vimconf/NERD_tree_1"
+-'  7  0  ~/git/vimconf/NERD_tree_1
+|4,39,7,0,1732854029,"~/git/vimconf/NERD_tree_1"
+-'  7  0  ~/git/vimconf/NERD_tree_1
+|4,39,7,0,1732854029,"~/git/vimconf/NERD_tree_1"
+-'  7  0  ~/git/vimconf/NERD_tree_1
+|4,39,7,0,1732854029,"~/git/vimconf/NERD_tree_1"
+-'  7  0  ~/git/vimconf/NERD_tree_1
+|4,39,7,0,1732854029,"~/git/vimconf/NERD_tree_1"
+-'  1  0  ~/git/vimconf/NERD_tree_1
+|4,39,1,0,1732854024,"~/git/vimconf/NERD_tree_1"
+-'  10  0  ~/git/vimconf/NERD_tree_1
+|4,39,10,0,1732854024,"~/git/vimconf/NERD_tree_1"
+-'  1  0  ~/git/vimconf/NERD_tree_1
+|4,39,1,0,1732854024,"~/git/vimconf/NERD_tree_1"
+-'  10  0  ~/git/vimconf/NERD_tree_1
+|4,39,10,0,1732854024,"~/git/vimconf/NERD_tree_1"
+-'  1  0  ~/git/vimconf/NERD_tree_1
+|4,39,1,0,1732854024,"~/git/vimconf/NERD_tree_1"
+-'  10  0  ~/git/vimconf/NERD_tree_1
+|4,39,10,0,1732854024,"~/git/vimconf/NERD_tree_1"
+-'  1  0  ~/git/vimconf/NERD_tree_1
+|4,39,1,0,1732854024,"~/git/vimconf/NERD_tree_1"
+-'  10  0  ~/git/vimconf/NERD_tree_1
+|4,39,10,0,1732854024,"~/git/vimconf/NERD_tree_1"
+-'  1  0  ~/git/vimconf/NERD_tree_1
+|4,39,1,0,1732854024,"~/git/vimconf/NERD_tree_1"
+-'  10  0  ~/git/vimconf/NERD_tree_1
+|4,39,10,0,1732854024,"~/git/vimconf/NERD_tree_1"
+-'  1  0  ~/git/vimconf/NERD_tree_1
+|4,39,1,0,1732854024,"~/git/vimconf/NERD_tree_1"
+-'  10  0  ~/git/vimconf/NERD_tree_1
+|4,39,10,0,1732854024,"~/git/vimconf/NERD_tree_1"
+-'  1  0  ~/git/vimconf/NERD_tree_1
+|4,39,1,0,1732854024,"~/git/vimconf/NERD_tree_1"
+-'  10  0  ~/git/vimconf/NERD_tree_1
+|4,39,10,0,1732854024,"~/git/vimconf/NERD_tree_1"
+-'  1  0  ~/git/vimconf/NERD_tree_1
+|4,39,1,0,1732854024,"~/git/vimconf/NERD_tree_1"
+-'  10  0  ~/git/vimconf/NERD_tree_1
+|4,39,10,0,1732854024,"~/git/vimconf/NERD_tree_1"
+-'  1  0  ~/git/vimconf/NERD_tree_1
+|4,39,1,0,1732854024,"~/git/vimconf/NERD_tree_1"
+-'  10  0  ~/git/vimconf/NERD_tree_1
+|4,39,10,0,1732854024,"~/git/vimconf/NERD_tree_1"
+-'  1  0  ~/git/vimconf/NERD_tree_1
+|4,39,1,0,1732854024,"~/git/vimconf/NERD_tree_1"
+-'  10  0  ~/git/vimconf/NERD_tree_1
+|4,39,10,0,1732854024,"~/git/vimconf/NERD_tree_1"
+-'  1  0  ~/git/vimconf/NERD_tree_1
+|4,39,1,0,1732854024,"~/git/vimconf/NERD_tree_1"
+-'  10  0  ~/git/vimconf/NERD_tree_1
+|4,39,10,0,1732854024,"~/git/vimconf/NERD_tree_1"
+-'  1  0  ~/git/vimconf/NERD_tree_1
+|4,39,1,0,1732854024,"~/git/vimconf/NERD_tree_1"
+-'  10  0  ~/git/vimconf/NERD_tree_1
+|4,39,10,0,1732854024,"~/git/vimconf/NERD_tree_1"
+-'  1  0  ~/git/vimconf/NERD_tree_1
+|4,39,1,0,1732854024,"~/git/vimconf/NERD_tree_1"
+-'  10  0  ~/git/vimconf/NERD_tree_1
+|4,39,10,0,1732854024,"~/git/vimconf/NERD_tree_1"
+-'  1  0  ~/git/vimconf/NERD_tree_1
+|4,39,1,0,1732854024,"~/git/vimconf/NERD_tree_1"
+-'  10  0  ~/git/vimconf/NERD_tree_1
+|4,39,10,0,1732854024,"~/git/vimconf/NERD_tree_1"
+-'  1  0  ~/git/vimconf/NERD_tree_1
+|4,39,1,0,1732854024,"~/git/vimconf/NERD_tree_1"
+-'  10  0  ~/git/vimconf/NERD_tree_1
+|4,39,10,0,1732854024,"~/git/vimconf/NERD_tree_1"
+-'  1  0  ~/git/vimconf/NERD_tree_1
+|4,39,1,0,1732854024,"~/git/vimconf/NERD_tree_1"
+-'  10  0  ~/git/vimconf/NERD_tree_1
+|4,39,10,0,1732854024,"~/git/vimconf/NERD_tree_1"
+-'  74  2  ~/dpdk/NERD_tree_1
+|4,39,74,2,0,"~/dpdk/NERD_tree_1"
+-'  91  0  ~/dpdk/NERD_tree_1
+|4,39,91,0,0,"~/dpdk/NERD_tree_1"
+-'  1  2  ~/dpdk/NERD_tree_1
+|4,39,1,2,0,"~/dpdk/NERD_tree_1"
+-'  51  0  ~/dpdk/lib/librte_lpm/Makefile
+|4,39,51,0,0,"~/dpdk/lib/librte_lpm/Makefile"
+-'  56  0  ~/dpdk/mk/rte.subdir.mk
+|4,39,56,0,0,"~/dpdk/mk/rte.subdir.mk"
+-'  84  26  ~/dpdk/mk/rte.subdir.mk
+|4,39,84,26,0,"~/dpdk/mk/rte.subdir.mk"
+-'  1  0  ~/dpdk/x86_64-default-linuxapp-gcc/[BufExplorer]
+|4,39,1,0,0,"~/dpdk/x86_64-default-linuxapp-gcc/[BufExplorer]"
+-'  45  0  ~/dpdk/x86_64-default-linuxapp-gcc/.depdirs
+|4,39,45,0,0,"~/dpdk/x86_64-default-linuxapp-gcc/.depdirs"
+-'  79  16  ~/dpdk/mk/rte.subdir.mk
+|4,39,79,16,0,"~/dpdk/mk/rte.subdir.mk"
+-'  87  36  ~/dpdk/mk/rte.subdir.mk
+|4,39,87,36,0,"~/dpdk/mk/rte.subdir.mk"
+-'  83  7  ~/dpdk/mk/rte.subdir.mk
+|4,39,83,7,0,"~/dpdk/mk/rte.subdir.mk"
+-'  46  0  ~/dpdk/lib/Makefile
+|4,39,46,0,0,"~/dpdk/lib/Makefile"
+-'  40  0  ~/dpdk/lib/librte_lpm/Makefile
+|4,39,40,0,0,"~/dpdk/lib/librte_lpm/Makefile"
+-'  93  0  ~/dpdk/scripts/depdirs-rule.sh
+|4,39,93,0,0,"~/dpdk/scripts/depdirs-rule.sh"
+-'  9  0  ~/dpdk/scripts/depdirs-rule.sh
+|4,39,9,0,0,"~/dpdk/scripts/depdirs-rule.sh"
+-'  71  0  ~/dpdk/mk/rte.sdkinstall.mk
+|4,39,71,0,0,"~/dpdk/mk/rte.sdkinstall.mk"
+-'  25  0  ~/dpdk/mk/rte.install.mk
+|4,39,25,0,0,"~/dpdk/mk/rte.install.mk"
+-'  1  0  ~/dpdk/mk/rte.install.mk
+|4,39,1,0,0,"~/dpdk/mk/rte.install.mk"
+-'  42  0  ~/dpdk/mk/target/generic/rte.vars.mk
+|4,39,42,0,0,"~/dpdk/mk/target/generic/rte.vars.mk"
+-'  124  0  ~/dpdk/mk/rte.vars.mk
+|4,39,124,0,0,"~/dpdk/mk/rte.vars.mk"
+-'  51  0  ~/dpdk/lib/Makefile
+|4,39,51,0,0,"~/dpdk/lib/Makefile"
+-'  66  0  ~/dpdk/mk/rte.subdir.mk
+|4,39,66,0,0,"~/dpdk/mk/rte.subdir.mk"
+-'  94  13  ~/dpdk/mk/rte.subdir.mk
+|4,39,94,13,0,"~/dpdk/mk/rte.subdir.mk"
+-'  102  13  ~/dpdk/mk/rte.subdir.mk
+|4,39,102,13,0,"~/dpdk/mk/rte.subdir.mk"
+-'  43  0  ~/dpdk/lib/Makefile
+|4,39,43,0,0,"~/dpdk/lib/Makefile"
+-'  1  0  ~/dpdk/mk/internal/rte.depdirs-post.mk
+|4,39,1,0,0,"~/dpdk/mk/internal/rte.depdirs-post.mk"
+-'  1  0  ~/dpdk/mk/rte.subdir.mk
+|4,39,1,0,0,"~/dpdk/mk/rte.subdir.mk"
+-'  115  0  ~/dpdk/NERD_tree_1
+|4,39,115,0,0,"~/dpdk/NERD_tree_1"
 
 # History of marks within files (newest to oldest):
 
-> ~/.vimrc
-	*	1732860226	0
-	"	140	0
-	^	140	0
-	.	139	30
-	+	36	32
-	+	36	0
-	+	36	54
-	+	155	0
-	+	36	0
-	+	24	53
-	+	36	0
-	+	25	18
-	+	76	0
-	+	14	0
-	+	16	0
-	+	18	0
-	+	20	0
-	+	23	0
-	+	25	0
-	+	36	0
-	+	39	35
-	+	37	0
-	+	43	74
-	+	76	0
-	+	40	0
-	+	47	62
-	+	76	0
-	+	48	0
-	+	52	32
-	+	76	0
-	+	53	0
-	+	76	0
-	+	57	51
-	+	55	0
-	+	76	0
-	+	75	0
-	+	74	0
-	+	75	0
-	+	77	0
-	+	76	0
-	+	35	0
-	+	76	0
-	+	93	28
-	+	96	0
-	+	92	0
-	+	96	0
-	+	78	0
-	+	96	0
-	+	96	7
-	+	76	0
-	+	75	0
-	+	73	110
-	+	73	0
-	+	73	52
-	+	73	0
-	+	71	51
-	+	62	0
-	+	64	0
-	+	66	0
-	+	68	0
-	+	70	0
-	+	96	0
-	+	99	48
-	+	97	0
-	+	99	0
-	+	98	43
-	+	110	25
-	+	110	0
-	+	109	0
-	+	108	70
-	+	102	0
-	+	103	0
-	+	103	36
-	+	105	0
-	+	103	27
-	+	106	0
-	+	107	0
-	+	108	24
-	+	96	0
-	+	96	43
-	+	96	39
-	+	96	30
-	+	96	0
-	+	95	0
-	+	94	0
-	+	121	0
-	+	103	0
-	+	120	35
-	+	113	0
-	+	11	0
-	+	112	25
-	+	61	0
-	+	59	25
-	+	155	0
-	+	137	10
-	+	155	8
-	+	155	0
-	+	152	9
-	+	148	0
-	+	154	0
-	+	139	30
-
 > ~/git/vimconf/.vimrc
-	*	1732860218	0
-	"	143	0
+	*	1732854951	0
+	"	94	0
 	^	94	0
 	.	93	0
 	+	5	0
@@ -562,112 +401,22 @@ $
 	+	74	0
 	+	93	0
 
-> ~/git/vimconf/README.md
-	*	1732860195	0
-	"	24	0
-	^	12	36
-	.	12	0
-	+	6	4
-	+	31	2
-	+	9	14
-	+	12	0
-
-> ~/git/vimconf/[Vundle] Installer
-	*	1732860190	0
-	"	8	0
-	.	1	0
-	+	19	0
-	+	14	0
-	+	8	0
-	+	1	0
-
-> ~/git/vimconf/NERD_tree_1
-	*	1732859687	0
-	"	12	0
-	.	1	0
-	+	1	0
-
-> ~/git/vimconf/__Tagbar__
-	*	1732859644	0
-	"	3	0
-	.	17	0
-	+	32	0
-	+	17	0
-
-> ~/NERD_tree_1
-	*	1732859280	0
-	"	31	0
-	.	1	0
-	+	1	0
-
-> ~/__Tagbar__
-	*	1732859188	0
-	"	31	0
-	.	32	0
-	+	32	0
-
-> ~/git/vimconf/NERD_tree_2
-	*	1732858703	0
-	"	10	0
-	.	1	0
-	+	1	0
-
-> ~/.gitconfig
-	*	1732858635	0
-	"	3	0
-
-> ~/[BufExplorer]
-	*	1732858347	0
-	"	1	0
-
-> ~/.sudo_as_admin_successful
-	*	1732858308	0
-	"	1	0
-
-> ~/ControlP
-	*	1732858188	0
-	"	3	0
-	.	2	0
-	+	1	0
-	+	4	0
-	+	2	0
-
-> ~/git/vimconf/[Vundle] list
-	*	1732858084	0
-	"	2	0
-	.	1	0
-	+	1	0
-
-> ~/.bashrc
-	*	1732857775	0
-	"	1	0
-
-> ~/.bash_history
-	*	1732857694	0
-	"	1	5
-
-> ~/[Vundle] Installer
-	*	1732857589	0
-	"	6	0
-	.	1	0
-	+	6	0
-	+	1	0
-
-> ~/git/vimconf/.viminfo
-	*	1732857492	0
-	"	1	0
-
-> ~/R
-	*	1732857180	0
-	"	1	0
-
-> ~/git/vimconf/.vim/colors/molokai.vim
-	*	1732856976	0
-	"	35	18
-
 > ~/git/vimconf/.git/config
 	*	1732854307	0
 	"	1	0
+
+> ~/git/vimconf/README.md
+	*	1732854072	0
+	"	6	4
+	^	6	5
+	.	6	4
+	+	6	4
+
+> ~/git/vimconf/NERD_tree_1
+	*	1732854027	0
+	"	7	0
+	.	1	0
+	+	1	0
 
 > ~/dpdk/mk/rte.install.mk
 	"	25	0
@@ -771,6 +520,12 @@ $
 	+	1	0
 	+	1	0
 	+	1	0
+
+> ~/.vimrc
+	"	31	39
+	^	31	40
+	.	31	39
+	+	31	39
 
 > ~/dpdk/Makefile
 	"	45	16
@@ -1637,3 +1392,118 @@ $
 	+	41	0
 	+	41	0
 	+	4	4
+
+> ~/ais/projects/dns/adns/src/adns/gen-cpp.bak/AdnsCntlrParams.cc
+	"	1	0
+
+> ~/ais/projects/dns/adns/src/adns/gen-cpp.bak/[BufExplorer]
+	"	1	0
+
+> /home/adns/etc/adns.conf
+	"	57	16
+	.	7	16
+	+	7	16
+
+> ~/ais/.git/COMMIT_EDITMSG
+	"	10	0
+	^	9	0
+	.	10	0
+	+	10	69
+	+	10	0
+	+	1	16
+	+	2	0
+	+	4	9
+	+	5	11
+	+	4	8
+	+	6	13
+	+	3	6
+	+	4	0
+	+	5	0
+	+	4	1
+	+	5	1
+	+	6	2
+	+	8	11
+	+	9	0
+	+	10	0
+
+> /tmp/edit.eoolcomu374sco40/new-commit
+	"	10	14
+	^	10	17
+	.	10	14
+	+	10	14
+
+> ~/alicpp/external/thrift/thrift-0.9.2/test/cpp/src/[BufExplorer]
+	"	4	0
+
+> ~/alicpp/external/thrift/thrift-0.9.2/tutorial/NERD_tree_1
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/alicpp/external/thrift/thrift-0.9.2/tutorial/NERD_tree_2
+	"	10	0
+	.	1	0
+	+	1	0
+
+> ~/alicpp/external/thrift/thrift-0.9.2/tutorial/cpp/CppClient.cpp
+	"	47	0
+
+> ~/ais/projects/dns/adns/target/etc/adns.conf
+	"	1	0
+
+> ~/ais/projects/dns/adns/Makefile
+	"	1	0
+
+> ~/ais/projects/dns/adns/adnsd
+	"	5	36
+	^	5	29
+	.	5	29
+	+	5	29
+
+> ~/alicpp/external/thrift/thrift-0.9.2/test/cpp/src/StressTest
+	"	1	0
+
+> ~/alicpp/external/thrift/thrift-0.9.2/test/cpp/gen-cpp/Service.h
+	"	969	0
+
+> ~/alicpp/external/thrift/thrift-0.9.2/test/cpp/src/__Tagbar__
+	"	9	3
+	.	59	0
+	+	120	0
+	+	120	0
+	+	120	0
+	+	120	0
+	+	120	0
+	+	120	0
+	+	81	0
+	+	81	0
+	+	81	0
+	+	81	0
+	+	81	0
+	+	81	0
+	+	81	0
+	+	81	0
+	+	81	0
+	+	81	0
+	+	81	0
+	+	81	0
+	+	81	0
+	+	81	0
+	+	81	0
+	+	81	0
+	+	81	0
+	+	81	0
+	+	81	0
+	+	81	0
+	+	81	0
+	+	59	0
+	+	59	0
+	+	59	0
+	+	59	0
+	+	59	0
+	+	59	0
+	+	59	0
+	+	59	0
+
+> ~/ais/projects/dns/adns/src/adns/admin.c
+	"	3323	0
