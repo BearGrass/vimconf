@@ -56,6 +56,10 @@ set hlsearch         " 高亮搜索结果
 set fileencodings=utf-8,gbk,ascii    " 文件编码顺序
 set termencoding=utf-8               " 终端编码
 
+nnoremap <tab> [I
+" 修改 tab 为显示函数调用列表
+
+
 " 与glightline 插件冲突
 "" 清空状态栏
 "set statusline=
@@ -96,7 +100,8 @@ map <F10> :NERDTreeFind<CR>
 "tag
 set tags=./tags;    " 递归向上查找 tags 文件
 set autochdir       " 自动切换工作目录
-" map <F12> :!ctags -R .<CR>    " F12 生成 tags
+map <F12> :!ctags -R .<CR>
+" F12 生成 tags
 
 "TagList
 "let Tlist_Use_Right_Window=1        " 在右侧显示窗口
