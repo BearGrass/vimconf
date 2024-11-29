@@ -119,6 +119,10 @@ let g:tagbar_right = 1               " 在右侧显示窗口
 let g:tagbar_autoclose = 0           " 不自动关闭
 nmap <silent> <F4> :TagbarToggle<CR>
 
+function! LightLineModified()
+  return &modified ? '+' : ''
+endfunction
+
 function! LightLineFilename()
   let filename = expand('%')
   if filename == ''
