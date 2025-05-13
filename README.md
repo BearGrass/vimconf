@@ -42,3 +42,16 @@ ctags -R --kinds-C=+defgmpstuvx --fields=+iaS --extras=+q dir1 dir2 dir3
 ```
 sudo apt-get install powerline
 ```
+
+
+# 解压包
+tar -xzvf vim-offline-config.tar.gz
+
+# 复制配置
+cp -r vim-offline-package/.vim ~/
+
+# 运行安装脚本
+bash ~/.vim/install.sh
+
+# 如果需要安装powerline字体（图形界面环境）
+bash ~/.vim/fonts/install-fonts.sh
