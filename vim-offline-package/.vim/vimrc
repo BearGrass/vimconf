@@ -11,7 +11,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
 Plugin 'preservim/tagbar'
-Plugin 'itchyny/lightline.vim'
+" Plugin 'itchyny/lightline.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
 
@@ -34,7 +34,7 @@ let g:airline#extensions#disable_rtp_load = 1
 if !exists('g:airline_extensions')
   let g:airline_extensions = []
 endif
-let g:airline_extensions += ['tabline', 'fugitive', 'branch', 'hunks', 'wordcount']
+let g:airline_extensions += ['tabline', 'branch', 'wordcount']
 
 " 快捷键映射
 let mapleader = ","
@@ -108,16 +108,16 @@ let g:tagbar_autoclose = 0
 nmap <silent> <F4> :TagbarToggle<CR>
 
 " Lightline配置
-let g:lightline = {
-      \ 'colorscheme': 'landscape',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'fugitive#head'
-      \ }
-      \ }
+" let g:lightline = {
+"       \ 'colorscheme': 'landscape',
+"       \ 'active': {
+"       \   'left': [ [ 'mode', 'paste' ],
+"       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+"       \ },
+"       \ 'component_function': {
+"       \   'gitbranch': 'fugitive#head'
+"       \ }
+"       \ }
 
 " 自动创建目录
 augroup BWCCreateDir
