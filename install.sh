@@ -45,7 +45,7 @@ check_build_deps() {
 
 # 备份现有配置
 backup_existing() {
-    local files=(".vim" ".vimrc" ".viminfo")
+    local files=(".vim" ".vimrc")
     local need_backup=0
 
     for file in "${files[@]}"; do
