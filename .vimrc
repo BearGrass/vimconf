@@ -17,6 +17,7 @@ Plugin 'vim-airline/vim-airline'    " 状态栏
 Plugin 'preservim/tagbar'           " 代码结构标签
 Plugin 'scrooloose/nerdtree'        " 文件树
 Plugin 'ctrlpvim/ctrlp.vim'         " 模糊搜索
+Plugin 'jlanzarotta/bufexplorer'    " Buffer 管理器
 
 call vundle#end()
 filetype plugin indent on
@@ -72,7 +73,7 @@ noremap <leader>8 :b 8<CR>
 noremap <leader>9 :b 9<CR>
 
 " 功能键
-noremap <F2> :BufExplorer<CR>       " Buffer 浏览器 (需额外插件)
+noremap <F2> :BufExplorer<CR>       " Buffer 浏览器 (打开：:BufExplorer 或 <F2>, 关闭：q 或 <F2>)
 noremap <F3> :NERDTreeToggle<CR>    " 文件树开关
 noremap <F4> :TagbarToggle<CR>      " 标签栏开关
 noremap <F10> :NERDTreeFind<CR>     " 在文件树定位当前文件
