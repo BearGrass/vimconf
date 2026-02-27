@@ -1,6 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/home/zhaozhi.gzz/alicpp/external/thrift/thrift-0.9.2/test/py.twisted'
-let g:netrw_dirhist_2='/home/zhaozhi.gzz/alicpp/external/thrift/thrift-0.9.2/test'
-let g:netrw_dirhist_3='/home/zhaozhi.gzz/alicpp/external/thrift/thrift-0.9.2/tutorial/cpp'
-let g:netrw_dirhist_4='/home/zhaozhi.gzz/dpdk/mk'
