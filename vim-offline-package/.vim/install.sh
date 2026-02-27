@@ -1,5 +1,5 @@
 #!/bin/bash
-# 离线安装快捷脚本
+# Vim 离线安装快捷脚本
 # 用法：bash ~/.vim/install.sh
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"

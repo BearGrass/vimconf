@@ -6,12 +6,29 @@
 
 - **离线可用**: 所有插件和依赖打包，无网络环境也能安装
 - **在线可用**: 支持通过 Vundle 在线更新插件
-- **开箱即用**: 一键安装，自动备份原有配置
-- **功能齐全**: NERDTree, Tagbar, CtrlP, Airline 等常用插件
+- **一键安装**: 自动检测环境，自动备份，自动安装依赖
+- **功能齐全**: NERDTree, Tagbar, CtrlP, Airline, BufExplorer 等常用插件
 
 ## 快速安装
 
-### 方式一：在线安装（推荐）
+### 方式一：一键安装（推荐）
+
+**在线环境：**
+```bash
+bash <(curl -sL https://raw.githubusercontent.com/BearGrass/vimconf/master/install.sh)
+```
+
+**离线环境：**
+```bash
+# 1. 将 vimconf 目录复制到目标机器
+cp -r vimconf /target/path/
+
+# 2. 运行安装脚本
+cd /target/path/vimconf
+bash install.sh
+```
+
+### 方式二：分步安装
 
 ```bash
 # 1. 克隆仓库
@@ -21,19 +38,10 @@ cd ~/vimconf
 # 2. 运行安装脚本
 bash install.sh
 
-# 3. 安装 ctags（二选一）
-#   - 系统包管理器
-sudo apt-get install exuberant-ctags
-#   - 或从源码编译
-unzip ctags-6.1.0.zip
-cd ctags-6.1.0 && ./autogen.sh && ./configure && make && sudo make install
-
-# 4. 启动 Vim 安装插件
-vim
-:PluginInstall
+# 3. 等待插件安装完成（首次需要几分钟）
 ```
 
-### 方式二：离线安装
+### 方式三：完全离线
 
 ```bash
 # 1. 复制离线配置
@@ -42,11 +50,8 @@ cp -r vim-offline-package/.vim ~/
 # 2. 运行安装脚本
 bash ~/.vim/install.sh
 
-# 3. 安装 Powerline 字体（可选，GUI 环境）
+# 3. (可选) 安装 Powerline 字体（GUI 环境）
 bash ~/.vim/fonts/install-fonts.sh
-
-# 4. 启动 Vim
-vim
 ```
 
 ## 快捷键
@@ -54,7 +59,7 @@ vim
 | 按键 | 功能 |
 |------|------|
 | `,1` - `,9` | 切换到缓冲区 1-9 |
-| `<F2>` | 缓冲区浏览器 (BufExplorer) |
+| `<F2>` | BufExplorer (打开/关闭缓冲区列表) |
 | `<F3>` | 切换 NERDTree 文件树 |
 | `<F4>` | 切换 Tagbar 标签栏 |
 | `<F10>` | NERDTree 定位当前文件 |
@@ -67,30 +72,31 @@ vim
 | 插件 | 说明 |
 |------|------|
 | Vundle.vim | 插件管理器 |
-| vim-airline | 状态栏 |
+| vim-airline | 轻量级状态栏 |
 | NERDTree | 文件资源管理器 |
 | Tagbar | 代码结构标签栏 |
 | CtrlP | 模糊文件搜索 |
 | vim-fugitive | Git 集成 |
+| BufExplorer | 缓冲区管理 |
 
 ## 目录结构
 
 ```
 vimconf/
-├── .vimrc              # Vim 主配置
-├── .vim/               # 运行时目录
-│   ├── autoload/       # 自动加载函数
-│   ├── bundle/         # Vundle 插件
-│   ├── colors/         # 配色方案
-│   ├── plugin/         # 插件配置
-│   └── syntax/         # 语法高亮
-├── vim-offline-package/ # 离线包
+├── .vimrc                   # Vim 主配置
+├── .vim/                    # 运行时目录
+│   ├── autoload/            # 自动加载函数
+│   ├── bundle/              # Vundle 插件
+│   ├── colors/              # 配色方案
+│   ├── plugin/              # 插件配置
+│   └── syntax/              # 语法高亮
+├── vim-offline-package/     # 离线包
 │   └── .vim/
-│       ├── bundle/     # 离线插件
-│       ├── fonts/      # Powerline 字体
-│       └── tools/      # 工具（ctags 源码）
-├── install.sh          # 安装脚本
-├── ctags-6.1.0.zip     # ctags 源码包
+│       ├── bundle/          # 离线插件 (含 BufExplorer)
+│       ├── fonts/           # Powerline 字体
+│       └── tools/           # 工具 (ctags 源码)
+├── install.sh               # 一键安装脚本
+├── download.sh              # 下载脚本
 └── README.md
 ```
 
@@ -98,22 +104,58 @@ vimconf/
 
 安装脚本会自动备份原有配置到 `~/vimbackup_YYYYMMDD_HHMMSS` 目录。
 
-如需恢复：
+**恢复旧配置：**
 ```bash
-mv ~/vimbackup_YYYYMMDD_HHMMSS/.vim ~
-mv ~/vimbackup_YYYYMMDD_HHMMSS/.vimrc ~
+mv ~/vimbackup_YYYYMMDD_HHMMSS/.vim ~/.vim
+mv ~/vimbackup_YYYYMMDD_HHMMSS/.vimrc ~/.vimrc
 ```
 
-## 其他
-
-### ctags 示例
-
+**卸载：**
 ```bash
-ctags -R --kinds-C=+defgmpstuvx --fields=+iaS --extras=+q dir1 dir2 dir3
+rm -rf ~/.vim ~/.vimrc
 ```
 
-### npm 镜像加速（国内）
+## 常见问题
 
+### ctags 安装失败
 ```bash
-npm config set registry https://registry.npmmirror.com
+# Ubuntu/Debian
+sudo apt-get install exuberant-ctags
+
+# CentOS/RHEL
+sudo yum install ctags
+
+# 或从源码编译
+cd ~/.vim/tools/ctags-6.1.0
+./autogen.sh && ./configure && make && sudo make install
+```
+
+### 状态栏显示方块/乱码
+安装 Powerline 字体：
+```bash
+bash ~/.vim/fonts/install-fonts.sh
+```
+
+### 插件更新
+```vim
+" 在 Vim 中执行
+:PluginUpdate
+```
+
+## 配置定制
+
+编辑 `~/.vimrc` 文件，常用定制：
+
+```vim
+" 修改主题
+colorscheme molokai
+
+" 修改行号显示
+set number          " 显示行号
+set relativenumber  " 相对行号
+
+" 修改缩进
+set ts=4            " tab 宽度
+set sw=4            " 缩进宽度
+set et              " tab 转空格
 ```
