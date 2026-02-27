@@ -26,7 +26,7 @@ filetype plugin indent on
 colorscheme molokai
 
 " --- 视觉优化 ---------------------------------------------------------------
-set number relativenumber           " 行号 + 相对行号
+set number                          " 显示固定行号
 set cursorline                      " 高亮当前行
 set laststatus=2                    " 总是显示状态栏
 set cmdheight=1                     " 命令行高度
