@@ -4,73 +4,96 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-This repository contains a Vim configuration setup for offline installation. The main configuration files are in the root directory (`.vimrc`, `.vim/`), with a complete offline package available in `vim-offline-package/`.
+A Vim configuration repository supporting both online and offline installation. The main configuration is `.vimrc` with Vundle for plugin management and airline for the statusline.
 
 ## Installation
 
-### Quick Install (from root directory)
+### One-Click Install (Recommended)
 ```bash
-bash install.sh
-```
-This backs up existing Vim config to `~/vimbackup_YYYYMMDD_HHMMSS` and installs new files.
+# Online
+bash <(curl -sL https://raw.githubusercontent.com/BearGrass/vimconf/master/install.sh)
 
-### Offline Package Install
-```bash
-tar -xzvf vim-offline-config.tar.gz
-cp -r vim-offline-package/.vim ~/
-bash ~/.vim/install.sh
+# Offline (copy repo to target machine first)
+cd vimconf && bash install.sh
 ```
 
-### Dependencies
-- **Vundle**: Plugin manager (included in bundle)
-- **ctags**: Code navigation (`sudo apt-get install exuberant-ctags` or build from `vim-offline-package/.vim/tools/ctags-6.1.0.zip`)
-- **nodejs/npm**: Required for coc.nvim
-- **Powerline fonts**: Optional, for airline statusline (`bash ~/.vim/fonts/install-fonts.sh`)
+### Manual Install
+```bash
+git clone https://github.com/BearGrass/vimconf.git ~/vimconf
+cd ~/vimconf && bash install.sh
+```
+
+The installer:
+- Auto-detects online/offline mode
+- Backs up existing config to `~/vimbackup_YYYYMMDD_HHMMSS`
+- Auto-installs dependencies (git, unzip, ctags)
+- Clones Vundle and runs `:PluginInstall` (online mode)
 
 ## Key Bindings
 
 | Key | Action |
 |-----|--------|
-| `<leader>,` | Leader key (comma) |
-| `<F2>` | BufExplorer |
+| `,1` - `,9` | Switch to buffer 1-9 |
+| `<F2>` | BufExplorer (open/close buffer list) |
 | `<F3>` | Toggle NERDTree |
 | `<F4>` | Toggle Tagbar |
-| `<F10>` | NERDTreeFind |
-| `<F12>` | Generate tags |
-| `<leader>1-9` | Switch to buffer 1-9 |
-| `<Tab>` | Show function call list |
+| `<F10>` | NERDTreeFind (locate current file) |
+| `<F12>` | Generate ctags |
+| `<Tab>` / `<C-i>` | Show function list |
+| `mapleader` | Comma `,` |
 
 ## Plugins
 
-- **Vundle**: Plugin management
-- **lightline.vim**: Statusline (replaced airline)
-- **NERDTree**: File explorer
-- **Tagbar**: Tag display
-- **ctrlp.vim**: Fuzzy file finder
-- **vim-fugitive**: Git integration
-- **bufexplorer**: Buffer switcher
-- **molokai**: Colorscheme
-
-## ctags Usage
-
-Generate tags recursively:
-```bash
-ctags -R --kinds-C=+defgmpstuvx --fields=+iaS --extras=+q dir1 dir2 dir3
-```
+| Plugin | Purpose |
+|--------|---------|
+| Vundle.vim | Plugin manager |
+| vim-airline | Statusline |
+| NERDTree | File explorer |
+| Tagbar | Code structure sidebar |
+| CtrlP | Fuzzy file finder |
+| vim-fugitive | Git integration |
+| BufExplorer | Buffer management |
+| molokai | Colorscheme |
 
 ## Architecture
 
 ```
-.
-├── .vimrc              # Main Vim configuration
-├── .vim/               # Runtime directory
-│   ├── autoload/       # Autoload functions (lightline, etc.)
-│   ├── bundle/         # Vundle plugins
-│   ├── colors/         # Color schemes
-│   ├── plugin/         # Plugin configs
-│   └── pack/           # Native packages
-├── vim-offline-package/    # Complete offline distribution
-└── install.sh          # Installation script
+vimconf/
+├── .vimrc                   # Main Vim config (unified for online/offline)
+├── .vim/                    # Runtime directory
+│   ├── autoload/            # Autoload functions
+│   ├── bundle/              # Vundle plugins
+│   ├── colors/              # Colorschemes (molokai)
+│   └── plugin/              # Plugin configurations
+├── vim-offline-package/     # Offline distribution
+│   └── .vim/
+│       ├── bundle/          # Pre-bundled plugins (including BufExplorer)
+│       ├── fonts/           # Powerline fonts
+│       └── tools/           # ctags-6.1.0.zip for offline build
+├── install.sh               # One-click installer
+├── download.sh              # Download helper
+└── README.md
 ```
 
-The `.vimrc` uses Vundle for plugin management with lightline.vim for statusline. The repo also includes `old/.vimrc` which has a previous configuration (airline instead of lightline).
+## Development Notes
+
+- **Unified config**: `.vimrc` and `vim-offline-package/.vim/vimrc` are synchronized
+- **Offline ready**: All plugins pre-bundled in `vim-offline-package/.vim/bundle/`
+- **ctags**: Available in `vim-offline-package/.vim/tools/ctags-6.1.0.zip`
+- **No coc.nvim**: Removed dependency on nodejs/npm
+
+## Common Commands
+
+```bash
+# Install ctags (if installer fails)
+sudo apt-get install exuberant-ctags
+
+# Install Powerline fonts (for airline symbols)
+bash ~/.vim/fonts/install-fonts.sh
+
+# Update plugins (inside Vim)
+:PluginUpdate
+
+# Generate tags
+ctags -R .
+```
