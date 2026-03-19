@@ -155,6 +155,26 @@ install_plugins() {
     info "插件安装完成"
 }
 
+# 确保 Vundle 可用（离线包可能缺失完整内容）
+ensure_vundle() {
+    local vundle_autoload="$HOME/.vim/bundle/Vundle.vim/autoload/vundle.vim"
+
+    if [ -f "$vundle_autoload" ]; then
+        info "Vundle 可用"
+        return 0
+    fi
+
+    warn "检测到 Vundle 缺失或不完整，尝试在线修复..."
+    rm -rf "$HOME/.vim/bundle/Vundle.vim"
+    if git clone --depth 1 https://github.com/VundleVim/Vundle.vim.git "$HOME/.vim/bundle/Vundle.vim"; then
+        info "Vundle 修复成功"
+        return 0
+    fi
+
+    warn "无法自动下载 Vundle，首次启动 Vim 时将提示安装说明"
+    return 1
+}
+
 # 主安装流程
 main() {
     echo ""
@@ -205,7 +225,11 @@ main() {
     # 创建目录
     mkdir -p "$HOME/.vim/undo"
     mkdir -p "$HOME/.vim/data"
+    mkdir -p "$HOME/.vim/bundle"
     info "已创建必要目录"
+
+    # 确保 Vundle 可用
+    ensure_vundle || true
 
     # 安装 ctags
     echo ""

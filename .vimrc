@@ -8,18 +8,25 @@ set nocompatible
 filetype off
 
 " --- 插件管理 (Vundle) ------------------------------------------------------
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+let s:vundle_autoload = expand('~/.vim/bundle/Vundle.vim/autoload/vundle.vim')
+if filereadable(s:vundle_autoload)
+    set rtp+=~/.vim/bundle/Vundle.vim
+    call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'       " 插件管理器
-Plugin 'tpope/vim-fugitive'         " Git 集成
-Plugin 'vim-airline/vim-airline'    " 状态栏
-Plugin 'preservim/tagbar'           " 代码结构标签
-Plugin 'scrooloose/nerdtree'        " 文件树
-Plugin 'ctrlpvim/ctrlp.vim'         " 模糊搜索
-Plugin 'jlanzarotta/bufexplorer'    " Buffer 管理器
+    Plugin 'VundleVim/Vundle.vim'       " 插件管理器
+    Plugin 'tpope/vim-fugitive'         " Git 集成
+    Plugin 'vim-airline/vim-airline'    " 状态栏
+    Plugin 'preservim/tagbar'           " 代码结构标签
+    Plugin 'scrooloose/nerdtree'        " 文件树
+    Plugin 'ctrlpvim/ctrlp.vim'         " 模糊搜索
+    Plugin 'jlanzarotta/bufexplorer'    " Buffer 管理器
 
-call vundle#end()
+    call vundle#end()
+else
+    echohl WarningMsg
+    echom '[vimconf] Vundle 未安装：请执行 bash ~/vimconf/install.sh 或手动安装 ~/.vim/bundle/Vundle.vim'
+    echohl None
+endif
 filetype plugin indent on
 
 " --- 配色方案 ---------------------------------------------------------------
